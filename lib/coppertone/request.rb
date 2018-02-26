@@ -11,7 +11,7 @@ module Coppertone
     end
 
     def authenticate
-      process_helo || process_mailfrom || default_value
+      process_helo && process_mailfrom || default_value
     end
 
     def process_helo
